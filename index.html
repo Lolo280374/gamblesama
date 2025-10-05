@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="coin.png">
+    <audio id="sfx_fail" src="sfx_fail.mp3"></audio>
+    <audio id="sfx_roll" src="sfx_found.mp3"></audio>
+    <title>gambleSama</title>
+</head>
+<body>
+    <header>
+        <div class="splash-container">
+            <h1>gambleSama</h1>
+            <div class="pop" id="splash">full otaku mode!!</div>
+        </div>
+        <p>we all love coins, and we all love anime? gamble and spend all your coins on figurines!</p>
+        <p><a href="https://github.com/Lolo280374/gambleSama">check out the github too</a> - <a href="https://cdn.lolodotzip.tech/dataset_gambleSama/all_fig.json">and the dataset i made for figurines</a></p>
+    </header>
+    <main class="roll-area">
+        <div class="card">
+            <div class="card-left">
+                <div title="click to view fullscreen" id="figureImage" class="placeholder">?</div>
+            </div>
+            <div class="card-right">
+                <h2><a id="figureName">start by rolling!</a></h2>
+                <p><strong>anime:</strong> <span id="figureAnime">-</span><a id="anisep" style="display:none">  -  </a><a id="search_anime" href="#" style="display:none" target="_blank">anime info!</a></p>
+                <p><strong>character:</strong> <span id="figureCharacter">-</span><a id="charsep" style="display:none">  -  </a><a id="search_chara" style="display:none" href="#" target="_blank">character info!</a></p>
+                <p><strong>released on:</strong> <span id="figureRelease">-</span></p>
+                <p><strong>price (MSRP):</strong> <span id="figureManufacturerPrice">-</span></p>
+                <br>
+                <p><strong id="mantag" style="display:none">manufacturer:</strong> <a id="figureManufacturer" href="#" target="_blank" style="display:none">-</a><a id="mansep" style="display:none">  -  </a><a id="google" href="#" target="_blank" style="display:none">search for retailers</a></p>
+            </div>
+        </div>
+        <button id="roll" class="roll-btn">roll!</button>
+        <input title="the siege coin icon represents JPY (the original currency in which items are sold)" id="currency" type="text" maxlength="21" placeholder="currency" class="roll-btn">
+        <input title="filter the randomized results for a specific anime" id="animefilter" type="text" placeholder="specific anime?" class="roll-btn">
+        <div id="results" class="results"></div>
+    </main>
+    <div id="imgModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg" alt="close">
+    </div>
+    <script src="script.js"></script>
+    <script defer src="footerimg.js"></script>
+</body>
+</html>

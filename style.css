@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&display=swap');
+
+body {
+    background-image: url('https://siege.hackclub.com/assets/parchment-texture-e4dc566e.jpg');
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid #ddd;
+    width: 50%;
+    margin: 1rem auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
+}
+
+.roll-area{
+    width: 70%;
+    margin: 2rem auto;
+    text-align: center;
+    font-family: Inter, sans-serif;
+}
+
+.card{
+    display: flex;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    align-items: center;
+}
+
+.card-left{
+    flex: 1;
+}
+
+.card-right{
+    flex: 2;
+    text-align: left;
+}
+
+.roll-btn{
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.roll-btn:hover{
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.placeholder, #figureImage img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    border-radius: 10px;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content{
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close{
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 8px 16px;
+    border-radius: 12px;
+}
+
+.close:hover{
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.image {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  max-height: 40vh;
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+.image:hover {
+  opacity: 0.5;
+}
+
+.results{
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: white;
+}
+
+.results div{
+    cursor: pointer;
+    padding: 2px 4px;
+}
+
+.results div:hover{
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* the following css is responsible for the minecraft splash type shit */
+/* found it at "https://jsfiddle.net/LhXwj/2/" cuz idk how to do that good css myself */
+
+.splash-container{
+    position: relative;
+    display: inline-block
+}
+
+.splash-container h1 {
+    font-size: 2rem;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+#splash{
+    position: absolute;
+    top: -30px;
+    left: 100%;
+    margin-left: 10px;
+    font-size: 1.5em;
+    font-family: 'minecraftfont';
+    color: #FFFF00;
+    text-shadow: 2px 2px #3F3F00;
+    z-index: 2;
+    transform: rotate(-25deg);
+    display: inline-block;
+}
+
+.pop {
+    animation: pop 0.58s infinite;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.95) rotate(-25deg); }
+    50% { transform: scale(1) rotate(-25deg); }
+    100% { transform: scale(0.95) rotate(-25deg); }
+}
+
+
+@-webkit-keyframes pop {
+    from {
+        -webkit-transform:scale(0.95)
+    }
+    50% {
+        -webkit-transform:scale(1)
+    }
+    to {
+        -webkit-transform:scale(0.95)
+    }
+}
+@font-face {
+    font-family:'minecraftfont';
+    src: url('http://design.d3x.co/demo/mcgeneric/font/minecraft_font.woff');
+}
