@@ -16,6 +16,7 @@ you've got money? coins? you love anime? gamble on which next figurine you shoul
 <img width="2560" height="1440" alt="Copie d'écran_20251005_151913" src="https://github.com/user-attachments/assets/5707db8f-7e90-4136-84b1-85aface697cd" />
 
 <br>
+
 > [!IMPORTANT]  
 > the database used for listing figurines does not filter mature content (NSFW) from SFW content. this can mean some figurines in this website could be considered "not safe for work" by some.
 > <br>i tried to delete (most) of the NSFW ones so you could use this site correctly, but due to the amount of figurines, i couldn't get them all.
